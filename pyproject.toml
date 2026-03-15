@@ -1,0 +1,14 @@
+[project]
+name = "pbl2test"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "beautifulsoup4>=4.14.3",
+    "langchain>=1.2.10",
+    "lmstudio>=1.5.0",
+    "markdownify>=1.2.2",
+    "ollama>=0.6.1",
+    "playwright>=1.58.0",
+]

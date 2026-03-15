@@ -1,0 +1,251 @@
+[
+  {
+    "test_id": "TC001",
+    "test_name": "Successful Login with Valid Credentials",
+    "category": "happy_path",
+    "priority": "high",
+    "description": "Verify that a user can log in successfully with valid username and password",
+    "steps": [
+      "Navigate to login page",
+      "Enter valid username 'student' in username field",
+      "Enter valid password 'Password123' in password field",
+      "Click the login button",
+      "Verify new page URL contains 'practicetestautomation.com/logged-in-successfully/'"
+    ],
+    "expected_result": "User successfully logs in and sees the dashboard"
+  },
+  {
+    "test_id": "TC002",
+    "test_name": "Successful Login with Valid Credentials (Alternative Path)",
+    "category": "happy_path",
+    "priority": "high",
+    "description": "Verify that a user can log in successfully with valid username and password using an alternative path",
+    "steps": [
+      "Navigate to login page via URL 'https://practicetestautomation.com/practice-test-login/'",
+      "Enter valid username 'student' in username field",
+      "Enter valid password 'Password123' in password field",
+      "Click the login button"
+    ],
+    "expected_result": "User successfully logs in and sees the dashboard"
+  },
+  {
+    "test_id": "TC003",
+    "test_name": "Unsuccessful Login with Invalid Username",
+    "category": "negative_test",
+    "priority": "high",
+    "description": "Verify that a user cannot log in with an invalid username",
+    "steps": [
+      "Navigate to login page",
+      "Enter invalid username 'invalidUser' in username field",
+      "Enter valid password 'Password123' in password field",
+      "Click the login button"
+    ],
+    "expected_result": "Error message displayed indicating that username is invalid"
+  },
+  {
+    "test_id": "TC004",
+    "test_name": "Unsuccessful Login with Invalid Password",
+    "category": "negative_test",
+    "priority": "high",
+    "description": "Verify that a user cannot log in with an invalid password",
+    "steps": [
+      "Navigate to login page",
+      "Enter valid username 'student' in username field",
+      "Enter invalid password 'InvalidPassword' in password field",
+      "Click the login button"
+    ],
+    "expected_result": "Error message displayed indicating that password is invalid"
+  },
+  {
+    "test_id": "TC005",
+    "test_name": "Forgot Password",
+    "category": "negative_test",
+    "priority": "medium",
+    "description": "Verify that the forgot password functionality works as expected",
+    "steps": [
+      "Navigate to login page",
+      "Click on 'Forgot Password' link"
+    ],
+    "expected_result": "User redirected to forgot password page"
+  },
+  {
+    "test_id": "TC006",
+    "test_name": "Invalid Credentials on Submit",
+    "category": "negative_test",
+    "priority": "high",
+    "description": "Verify that the application handles invalid credentials correctly on submit",
+    "steps": [
+      "Navigate to login page",
+      "Enter any random text in username field",
+      "Enter any random text in password field",
+      "Click the login button"
+    ],
+    "expected_result": "Error message displayed indicating that username and/or password is invalid"
+  },
+  {
+    "test_id": "TC007",
+    "test_name": "Empty Username on Submit",
+    "category": "negative_test",
+    "priority": "high",
+    "description": "Verify that the application handles empty username correctly on submit",
+    "steps": [
+      "Navigate to login page",
+      "Leave username field blank",
+      "Enter valid password 'Password123' in password field",
+      "Click the login button"
+    ],
+    "expected_result": "Error message displayed indicating that username is required"
+  },
+  {
+    "test_id": "TC008",
+    "test_name": "Empty Password on Submit",
+    "category": "negative_test",
+    "priority": "high",
+    "description": "Verify that the application handles empty password correctly on submit",
+    "steps": [
+      "Navigate to login page",
+      "Enter valid username 'student' in username field",
+      "Leave password field blank",
+      "Click the login button"
+    ],
+    "expected_result": "Error message displayed indicating that password is required"
+  },
+  {
+    "test_id": "TC009",
+    "test_name": "Submit Button Click without Filling Credentials",
+    "category": "negative_test",
+    "priority": "high",
+    "description": "Verify that the application handles submit button click correctly when credentials are not filled",
+    "steps": [
+      "Navigate to login page",
+      "Click the login button"
+    ],
+    "expected_result": "Error message displayed indicating that username and/or password is required"
+  },
+  {
+    "test_id": "TC010",
+    "test_name": "Valid Username with Special Characters on Submit",
+    "category": "negative_test",
+    "priority": "high",
+    "description": "Verify that the application handles valid username with special characters correctly on submit",
+    "steps": [
+      "Navigate to login page",
+      "Enter valid username 'student!' in username field",
+      "Enter valid password 'Password123' in password field",
+      "Click the login button"
+    ],
+    "expected_result": "User successfully logs in and sees the dashboard"
+  },
+  {
+    "test_id": "TC011",
+    "test_name": "Valid Password with Special Characters on Submit",
+    "category": "negative_test",
+    "priority": "high",
+    "description": "Verify that the application handles valid password with special characters correctly on submit",
+    "steps": [
+      "Navigate to login page",
+      "Enter valid username 'student' in username field",
+      "Enter valid password 'Password!123' in password field",
+      "Click the login button"
+    ],
+    "expected_result": "User successfully logs in and sees the dashboard"
+  },
+  {
+    "test_id": "TC012",
+    "test_name": "Submit Button Click on Empty Username Field with Valid Password",
+    "category": "negative_test",
+    "priority": "high",
+    "description": "Verify that the application handles submit button click correctly when username field is empty and password is valid",
+    "steps": [
+      "Navigate to login page",
+      "Leave username field blank",
+      "Enter valid password 'Password123' in password field",
+      "Click the login button"
+    ],
+    "expected_result": "Error message displayed indicating that username is required"
+  },
+  {
+    "test_id": "TC013",
+    "test_name": "Submit Button Click on Empty Password Field with Valid Username",
+    "category": "negative_test",
+    "priority": "high",
+    "description": "Verify that the application handles submit button click correctly when password field is empty and username is valid",
+    "steps": [
+      "Navigate to login page",
+      "Enter valid username 'student' in username field",
+      "Leave password field blank",
+      "Click the login button"
+    ],
+    "expected_result": "Error message displayed indicating that password is required"
+  },
+  {
+    "test_id": "TC014",
+    "test_name": "Submit Button Click with Blank Username and Password Fields",
+    "category": "negative_test",
+    "priority": "high",
+    "description": "Verify that the application handles submit button click correctly when both username and password fields are blank",
+    "steps": [
+      "Navigate to login page",
+      "Leave username field blank",
+      "Leave password field blank",
+      "Click the login button"
+    ],
+    "expected_result": "Error message displayed indicating that username and/or password is required"
+  },
+  {
+    "test_id": "TC015",
+    "test_name": "Invalid Username Length on Submit",
+    "category": "negative_test",
+    "priority": "high",
+    "description": "Verify that the application handles invalid username length correctly on submit",
+    "steps": [
+      "Navigate to login page",
+      "Enter username with more than 50 characters in username field",
+      "Enter valid password 'Password123' in password field",
+      "Click the login button"
+    ],
+    "expected_result": "Error message displayed indicating that username length is invalid"
+  },
+  {
+    "test_id": "TC016",
+    "test_name": "Invalid Password Length on Submit",
+    "category": "negative_test",
+    "priority": "high",
+    "description": "Verify that the application handles invalid password length correctly on submit",
+    "steps": [
+      "Navigate to login page",
+      "Enter valid username 'student' in username field",
+      "Enter password with more than 50 characters in password field",
+      "Click the login button"
+    ],
+    "expected_result": "Error message displayed indicating that password length is invalid"
+  },
+  {
+    "test_id": "TC017",
+    "test_name": "Blank Username on Submit (Edge Case)",
+    "category": "edge_case",
+    "priority": "medium",
+    "description": "Verify that the application handles blank username correctly on submit",
+    "steps": [
+      "Navigate to login page",
+      "Enter blank text in username field",
+      "Enter valid password 'Password123' in password field",
+      "Click the login button"
+    ],
+    "expected_result": "Error message displayed indicating that username is required"
+  },
+  {
+    "test_id": "TC018",
+    "test_name": "Blank Password on Submit (Edge Case)",
+    "category": "edge_case",
+    "priority": "medium",
+    "description": "Verify that the application handles blank password correctly on submit",
+    "steps": [
+      "Navigate to login page",
+      "Enter valid username 'student' in username field",
+      "Leave password field blank",
+      "Click the login button"
+    ],
+    "expected_result": "Error message displayed indicating that password is required"
+  }
+]
